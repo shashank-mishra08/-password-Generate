@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+      <!-- ek top level div banate hain -->
+    <div class="container">
+
+        <h1>GENERATE  PASSWORD</h1>
+
+        <div class="display-container">
+            <input readonly placeholder="password" class="display" data-passwordDisplay  >
+            <button class="copybtn" data-copy>
+                <span data-copyMsg></span>
+
+                <!-- copy icon -->
+                <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="10"
+                height="10"
+              >
+                <path
+                  d="M10 2H4a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V12l-6-6zm6 0v6h6z"
+                  fill="currentColor"
+                />
+              </svg>
+
+            </button>
+
+        </div> <!--Display container ka-->
+
+        <!-- input container -->
+         <div class="input-container">
+            <!-- div for password length and how long is password -->
+             <div class="length-container">
+                <p>Password Length</p>
+                <!-- custom Attribute -->
+                <p data-lengthNumber> 0 </p> 
+             </div> <!--length container end-->
+
+             <!-- slider======================================================================== -->
+             <input type="range" class="slider" min="0" max="100" value="50" step="1" data-lengthSlider>
+
+
+             <!--checkboxes-->
+             <!-- instead of seperate div you could have done using label ke andar -->
+              <div>
+                <div class="check">
+                    <input type="checkbox" id="uppercase" name="options" value="Option1">
+                <label for="uppercase">include uppercase letters</label>
+                </div>
+
+                <div class="check">
+                    <input type="checkbox" id="lowercase" name="options" value="Option1">
+                <label for="uppercase">include lowercase letters</label>
+                </div>
+
+                <div class="check">
+                    <input type="checkbox" id="symbols" name="options" value="Option1">
+                <label for="uppercase">include symbols</label>
+                </div>
+
+                <div class="check">
+                    <input type="checkbox" id="numbers" name="options" value="Option1">
+                <label for="uppercase">includes numbers</label>
+                </div>
+
+              </div><!--checkboxes ka div-->
+              <!-- strength and red/green dot -->
+               <div class="strength-container">
+                <p>strength</p>
+                <div data-indicator class="indicator"></div>
+
+               </div> <!--strength and red/green dot -->
+
+               <!-- password Generator ka div -->
+                <button class="generate-button">Generate Password</button>
+               
+                
+          
+             
+
+         </div> <!--input container ka div hai-->
+         
+        
+    </div> <!--top level-container ka-->
+    <script src="index.js"></script>
+</body>
+</html>
